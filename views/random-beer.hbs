@@ -1,4 +1,22 @@
+{{!-- According to the lab instructions, you are missing some information on the random beeer --}}
+{{!-- Given that its info that is displayed on random beer but not on beers, you should use the partial for the common part, and then display the rest --}}
+{{!-- Example bellow --}}
+
 <h2>Welcome to Random Beer</h2>
 {{#each beersFromAPI}}
 {{> beerpartial this}}
+<div id="food-container">
+
+<h5>Food pairing:</h5>
+<ul id="random-ul">
+  {{#each food_pairing}} 
+    <li id="random-li">{{this}}</li>
+  {{/each}}
+  
+</ul>
+    
+<p>
+  <span>Brewers Tips:</span> {{brewers_tips}}
+</p>
+</div>
 {{/each}}

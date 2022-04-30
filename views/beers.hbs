@@ -1,5 +1,6 @@
 <h2>Welcome to Beer page</h2>
 {{#each beerData}}
-<a href=`{{__dirname}}/beers/beer/{{id}}/`>{{name}}</a>
+{{!-- Your href was not working because you were using the template literals and not quotes. On hbs we use quotes all the time --}}
+<a href="/beers/beer/{{id}}"/>{{name}}</a>
 {{> beerpartial this}}
 {{/each}}
